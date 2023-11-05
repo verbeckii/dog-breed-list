@@ -41,7 +41,7 @@ const BreedSelector = ({ breeds }: BreedSelectorProps) => {
 
 	return (
 		<div className="mb-4">
-			<select onChange={onSelectBreed} value={breed || ""} className="p-2 border rounded-md">
+			<select onChange={onSelectBreed} value={breed || ""} className="p-2 border rounded-md mb-1 mr-2">
 				<option value="">Select Breed</option>
 				{Object.keys(breeds).map((breed) => (
 					<option key={breed} value={breed}>
@@ -54,7 +54,7 @@ const BreedSelector = ({ breeds }: BreedSelectorProps) => {
 				<select
 					onChange={onSelectSubBreed}
 					value={subBreed || ""}
-					className="p-2 border rounded-md ml-2"
+					className="p-2 border rounded-md"
 				>
 					<option value="">Select Sub-Breed</option>
 					{breeds[breed].map((subBreed) => (
